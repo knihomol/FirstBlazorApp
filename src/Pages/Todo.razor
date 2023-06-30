@@ -10,8 +10,8 @@
     }
 </ul>
 
-<input @bind="newTodo" placeholder="What do you need to do?"/>
-<input @bind="dueDate" placeholder="Due Date"/>
+<input @bind="newTodo" @bind:event="oninput" placeholder="What do you need to do?"/>
+<input @bind="dueDate" @bind:format="yyyy-MM-dd" placeholder="Due Date"/>
 <button @onclick="Save">Save</button>
 
 @if (!string.IsNullOrEmpty(newTodo))
